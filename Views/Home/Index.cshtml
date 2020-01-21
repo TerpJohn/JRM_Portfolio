@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <title>JRM Portfolio</title>
 
     <!-- Bootstrap core CSS -->
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -22,6 +22,7 @@
 
     <!-- Custom styles for this template -->
     <link href="~/Content/grayscale.min.css" rel="stylesheet" />
+    <link href="~/Templates/CSS/prism.css" rel="stylesheet" />
 
 </head>
 
@@ -94,7 +95,7 @@
                 </div>
             </div>
 
-            <!-- Projects One Row -->  
+            <!-- Projects One Row -->
             <div class="row justify-content-center no-gutters">
                 <div class="col-lg-6">
                     <img class="img-fluid" src="~/img/Addition.jpg" alt="" />
@@ -350,7 +351,8 @@
                 </div>
 
                 @*Code for display*@
-                <div id="FNumbersCode" style="display:none"><pre rel="JavaScript"><code class="lang-javascript">
+                <div id="FNumbersCode" style="display:none">
+                    <pre><code class="language-js">
             
     function Calculate() {
 
@@ -393,7 +395,8 @@
     document.getElementById("outputMean").innerHTML="";
 
     }
-</code></pre></div>
+</code></pre>
+                </div>
 
 
             </div>
@@ -446,7 +449,8 @@
                 </div>
 
                 @*Code for display*@
-                <div id="FactorCode" style="display:none"><pre rel="JavaScript"><code class="lang-javascript">
+                <div id="FactorCode" style="display:none">
+                    <pre rel="JavaScript"><code class="lang-javascript">
     function Calculate2() {
     //Get input
     var numF1 = parseInt(document.getElementById("inputFctr").value);
@@ -489,10 +493,11 @@
     document.getElementById("outputFactorial").innerHTML = "";
     }
 
-</code></pre></div>
+</code></pre>
+                </div>
 
             </div>
-            </div>
+        </div>
     </div>
 
     <!--Modal 3-->
@@ -599,7 +604,7 @@
                 </div>
 
             </div>
-            </div>
+        </div>
     </div>
 
     <!--Modal 4-->
@@ -672,10 +677,10 @@
 </code></pre>
                 </div>
             </div>
-         </div>
+        </div>
     </div>
 
-<!--Scripts-->
+    <!--Scripts-->
     <script>
         //5 Numbers script
         function Calculate() {
@@ -786,16 +791,16 @@
             //Evaluate for solution and display
             for (i = 1; i <= 100; i++) {
                 if (i % numFb1 == 0 && i % numFb2 == 0) {
-                    array.push("FizzBuzz");
+                    array.push("<b style='color: green;'>FizzBuzz</b>");
                 }
                 else if (i % numFb1 == 0 && i % numFb2 != 0) {
-                    array.push("Fizz");
+                    array.push("<b style='color: blue;'>Fizz</b>");
                 }
                 else if (i % numFb1 != 0 && i % numFb2 == 0) {
-                    array.push("Buzz");
+                    array.push("<b style='color: red;'>Buzz</b>");
                 }
                 else {
-                    array.push(i);
+                    array.push("<b style='color: black;'>"+i+"</b>");
                 }
             }
             document.getElementById("result").innerHTML = array.join(" , ");
@@ -867,6 +872,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="~/Scripts/grayscale.min.js"></script>
+    <script src="~/Templates/JS/prism.js"></script>
 
 </body>
 
